@@ -12,7 +12,7 @@ const BlogList = (props) => {
       let res = await fetch(baseUrl + "/blogPosts");
       let data = await res.json();
       setDatas(data);
-      await console.log(data);
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
