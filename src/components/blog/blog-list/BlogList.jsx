@@ -8,9 +8,8 @@ const BlogList = (props) => {
 
   const fetchFromApi = async () => {
     try {
-      let res = await fetch(
-        "https://mysterious-rose-turtle.cyclic.app/products"
-      );
+      const baseUrl = process.env.REACT_APP_BE_URL;
+      let res = await fetch(baseUrl + "/blogPosts");
       let data = await res.json();
       setDatas(data);
       await console.log(data);
