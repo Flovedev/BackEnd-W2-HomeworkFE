@@ -13,6 +13,7 @@ const BlogList = (props) => {
       let data = await res.json();
       setDatas(data);
       console.log(data);
+      console.log(baseUrl);
     } catch (error) {
       console.log(error);
     }
